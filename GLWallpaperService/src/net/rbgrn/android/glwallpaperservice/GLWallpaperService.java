@@ -38,7 +38,7 @@ import android.view.SurfaceHolder;
 // Original code provided by Robert Green
 // http://www.rbgrn.net/content/354-glsurfaceview-adapted-3d-live-wallpapers
 public class GLWallpaperService extends WallpaperService {
-	private static final String TAG = "GLWallpaperService";
+	//private static final String TAG = "GLWallpaperService";
 
 	@Override
 	public Engine onCreateEngine() {
@@ -92,14 +92,14 @@ public class GLWallpaperService extends WallpaperService {
 
 		@Override
 		public void onSurfaceCreated(SurfaceHolder holder) {
-			Log.d(TAG, "onSurfaceCreated()");
+			//Log.d(TAG, "onSurfaceCreated()");
 			mGLThread.surfaceCreated(holder);
 			super.onSurfaceCreated(holder);
 		}
 
 		@Override
 		public void onSurfaceDestroyed(SurfaceHolder holder) {
-			Log.d(TAG, "onSurfaceDestroyed()");
+			//Log.d(TAG, "onSurfaceDestroyed()");
 			mGLThread.surfaceDestroyed();
 			super.onSurfaceDestroyed(holder);
 		}
