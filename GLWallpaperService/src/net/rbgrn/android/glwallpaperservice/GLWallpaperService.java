@@ -31,6 +31,7 @@ import javax.microedition.khronos.opengles.GL10;
 import net.rbgrn.android.glwallpaperservice.BaseConfigChooser.ComponentSizeChooser;
 import net.rbgrn.android.glwallpaperservice.BaseConfigChooser.SimpleEGLConfigChooser;
 import android.opengl.GLSurfaceView;
+import android.opengl.GLSurfaceView.EGLConfigChooser;
 import android.service.wallpaper.WallpaperService;
 import android.util.Log;
 import android.view.SurfaceHolder;
@@ -834,10 +835,6 @@ class GLThread extends Thread {
 			notifyAll();
 		}
 	}
-}
-
-interface EGLConfigChooser {
-	EGLConfig chooseConfig(EGL10 egl, EGLDisplay display);
 }
 
 abstract class BaseConfigChooser implements EGLConfigChooser {
